@@ -9,8 +9,8 @@ String : String : String : Int
 
 4) cetvri element oznacava difoltno trajanje koraka (jedan takt ima trajanje 4)
 --
-DODATNI : echo casino : fly : 1 2 3 4 5 6 7 8  
 
+LINIJA : echo : fly : 8 
 LINIJA : echo : echo : 8 
 LINIJA : echo : osnovni : 8
 LINIJA : echo : osnovni samo napred : 8
@@ -19,7 +19,7 @@ LINIJA : echo : osnovni u mestu : 8
 LINIJA : echo : la cucaracha : 8
 LINIJA : echo : cumbia : 8
 LINIJA : echo : son : 8
-LINIJA : echo : produzeno osnovni : 8
+LINIJA : echo : produzeni osnovni : 8
 LINIJA : echo : produzena cumbia : 8
 LINIJA : echo : produzeni u stranu : 8
 LINIJA : echo : mambo : 8
@@ -49,34 +49,31 @@ ECHO : : reloj : 8
 ECHO : : vuelta : 8
 ECHO : : kombinacija : 16
 ECHO : : kombinacija por abajo : 16
-ECHO : : dile qui no : 8
+ECHO : : dile que no : 8
 
 CASINO : figura iz otvaranja : pnqe : 16
 CASINO : figura iz otvaranja : pnqe doble : 16
-CASINO : figura iz otvaranja : dile que si :
-CASINO : figura iz otvaranja : sombrero :
-CASINO : figura iz otvaranja : ocente y cuatro :
-CASINO : figura iz otvaranja : vacilila :
-CASINO : figura iz otvaranja : la montana :
-CASINO : figura iz otvaranja : el dedo :
-CASINO : figura iz otvaranja : setenta :
-CASINO : figura iz otvaranja : setenta y uno :
-CASINO : figura iz otvaranja : setenta y dos :
-CASINO : figura iz otvaranja : setenta y cuatro :
-CASINO : figura iz otvaranja : roberto :
-CASINO : figura iz otvaranja : setenta complicate :
-CASINO : figura iz otvaranja : vacilila con en gano :
+CASINO : figura iz otvaranja : sombrero : 24
+CASINO : figura iz otvaranja : ocente y cuatro : 32
+CASINO : figura iz otvaranja : vacilila : 24
+CASINO : figura iz otvaranja : la montana : 40
+CASINO : figura iz otvaranja : el dedo : 32
+CASINO : figura iz otvaranja : setenta : 40
+CASINO : figura iz otvaranja : setenta y uno : 24
+CASINO : figura iz otvaranja : setenta y dos : 24
+CASINO : figura iz otvaranja : setenta y cuatro : 40
+CASINO : figura iz otvaranja : setenta complicate : 32
 
 CASINO : figura iz encufle : encufla : 8
 CASINO : figura iz encufle : encufla-exibela : 16
-CASINO : figura iz encufle : pasela : 
+CASINO : figura iz encufle : pasela : 32
 CASINO : figura iz encufle : encufla doble : 16
 CASINO : figura iz encufle : encufla al centro : 8
-CASINO : figura iz encufle : pa ti pa mi :
-CASINO : figura iz encufle : kentacky :
-CASINO : figura iz encufle : casate : 
-CASINO : figura iz encufle : encufla coca-cola :
+CASINO : figura iz encufle : pa ti pa mi : 32
+CASINO : figura iz encufle : kentacky : 24
 
+
+RUEDA : casino : fly : 8 
 RUEDA : echo : dame : 8 
 RUEDA : casino : dame : 16  
 RUEDA : echo : taro : 8
