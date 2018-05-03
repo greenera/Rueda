@@ -2,6 +2,7 @@ import Data.List
 import Data.List.Split
 import Data.Char
 import System.Directory
+import System.Process
 
 substring :: String -> String -> Bool
 substring (x:xs) [] = False
@@ -30,7 +31,8 @@ findIndexR needle haystack =
     last $ findIndices (== needle) haystack
 
 --ulaz: putanja do .txt fajla u kome se nalazi spisak figura sa potrebnim informacijama
---izlaz: niz figura (torki) tako da svakom polju torke odgovara po jedna informacija iz fajla 
+--izlaz: niz IO figura (torki) (spadaju u IO jer se obavlja obrada ulaza tj fajla unutar funkcije)
+-- tako da svakom polju torke odgovara po jedna informacija iz fajla 
 --svaka linija sadrzi niz informacija o jednoj figuri, a informacije u fajlu su razdvojene dvotackom
 --komentari su u fajlu obelezeni sa "--" na pocetku i kraju
 --komentari i nepravilno popunjeni redovi se ignorisu
@@ -41,6 +43,9 @@ ucitajFigure imeFajla  = do
     let ispravne = filter (/="") (drop ((findIndexR "--" linije)+1) linije)
     return (map ucitajFiguru ispravne)
 
+-- ulaz:jedna linija iz fajla koja se parsira u jednu figuru
+-- izlaz: parsirana figura
+-- funkcija izdvojena posebno radi lakse promene nacina parsiranja linija u fajlu
 ucitajFiguru :: String -> (String, String, String, Int)
 ucitajFiguru linijaFajla =
     (
@@ -96,8 +101,8 @@ dodajFiguru korak@(nacin, stav, ime, trajanje) imeFajla = do
     else do
         putStrLn "The file doesn't exist!"
         return False
-                         
-                                
+
+
 --Ivana d'uradi nesto
 provera :: (String, String, String, Int) -> Bool
 provera korak = True
@@ -162,4 +167,15 @@ izbrisiFiguru (nacin, ime) imeFajla = do
 -- izaberiFiguru redniBrFig ocena =
 --     if ocena < 1 || ocena > 11 then
 --         putStrLn "Unesite ocenu iz opsega od 1 do 11!"
-    
+
+-- ulaz: putanja do fajla koji treba pustiti
+-- izlaz: Bool koji govori da li je funkcija uspesno odsvirala svoje
+-- NAPOMENA: neophodno skinuti ffmpeg za pustanje mp3 fajlova
+-- (sudo apt-get install ffmpeg)
+-- TODO: dodati Assert-ove tj igrati se sa ffplay u terminalu da bi se naslo 
+-- pravilo za parsiranje ispisa na stderr (greska)
+-- ffplay -autoexit -vn -nodisp muzika/test.mp3
+-- "seq" ["1", "10"] ""
+pustiMuziku putanja = do
+    povVr@(exitCode, output, greska) <- readProcessWithExitCode "ffplay" ["-autoexit", "-vn", "-nodisp", putanja] ""
+    print povVr
