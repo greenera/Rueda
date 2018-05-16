@@ -1,95 +1,113 @@
 --
-String : String : String : Int
+String : String : String : Int : Int
 
-1) prvi element oznacava nacin igranja
+1) formacija
 
-2) drugi element oznacava da li korak moze da se igra iz casino ili echo stava
+2) da li korak moze da se igra iz casino ili echo stava ili je dodatak liniji
 
-3) treci element je ime koraka
+3) ime koraka
 
-4) cetvri element oznacava difoltno trajanje koraka (jedan takt ima trajanje 4)
+4) difoltno trajanje koraka (jedan takt ima trajanje 4)
+
+5) nivo tezine koraka
+
+6) br od 1 do 11 koji se dodaje pri svakom taktu (zadaje korisnik a moze i difoltno)
+
+7) koliko puta se po difoltu ponavlja ceo korak
+
+8) ocena prozivanja koraka -> sto je veca pre ce biti prozvan
+
+9) koordinate na kojima treba iscrtati stopala na animaciji
+
+10) putanje slika koje odgovaraju svakom paru iz koordinata
+
+11) opis casino figura
 --
 
-LINIJA : echo : fly : 8 
-LINIJA : echo : echo : 8 
-LINIJA : echo : osnovni : 8
-LINIJA : echo : osnovni samo napred : 8
-LINIJA : echo : osnovni samo nazad : 8
-LINIJA : echo : osnovni u mestu : 8
-LINIJA : echo : la cucaracha : 8
-LINIJA : echo : cumbia : 8
-LINIJA : echo : son : 8
-LINIJA : echo : produzeni osnovni : 8
-LINIJA : echo : produzena cumbia : 8
-LINIJA : echo : produzeni u stranu : 8
-LINIJA : echo : mambo : 8
-LINIJA : echo : contra mambo : 8
-LINIJA : echo : foto : 8
-LINIJA : echo : foto-klave : 8
-LINIJA : : desni okret : 8
-LINIJA : : polu desni okret : 8
-LINIJA : : polu levi okret : 8
-LINIJA : : levi okret : 8
-LINIJA : : foto-klave complicate : 16
-LINIJA : : cruse : 8
-LINIJA : : al centro : 8
-LINIJA : : mexico : 8
-LINIJA : : produzene cruse : 8
-LINIJA : : kick (iz osnovnog) : 8
-LINIJA : : kick (iz cumbie) : 8
-LINIJA : : setnja (iz osnovnog) : 16
-LINIJA : : bamboleo : 8
-LINIJA : : nulta setnja : 16
-LINIJA : : prsti-peta : 8
-LINIJA : : pehar : 16
-LINIJA : : roberto : 16
+LINIJA : dodatak: fly : 8 : 1 : 2 : 1 : 2 : : pljes.jpeg : 
+LINIJA : dodatak: tapsanje nepar : 8 : 1 : : : : :
+LINIJA : dodatak: tapsanje par : 8 : 1 : : : : :
+LINIJA : dodatak: klave : 8 : 1 : : : : :
+LINIJA : echo : echo : 8 : 1 : : : : :
+LINIJA : echo : osnovni : 8 : 1: : : : :
+LINIJA : echo : osnovni samo napred : 8 : 1 : : : : :
+LINIJA : echo : osnovni samo nazad : 8 : 1: : : : :
+LINIJA : echo : osnovni u mestu : 8 : 1: : : : :
+LINIJA : echo : la cucaracha : 8 : 1: : : : :
+LINIJA : echo : cumbia : 8 : 1: : : : :
+LINIJA : echo : son : 8 : 1: : : : :
+LINIJA : echo : produzeni osnovni : 8 : 2: : : : :
+LINIJA : echo : produzena cumbia : 8 : 2: : : : :
+LINIJA : echo : produzeni u stranu : 8 : 2: : : : :
+LINIJA : echo : mambo : 8 : 1: : : : :
+LINIJA : echo : contra mambo : 8 : 2: : : : :
+LINIJA : echo : foto : 8 : 1: : : : :
+LINIJA : echo : foto-klave : 8 : 2: : : : :
+LINIJA : echo : foto-cuba : 8 : 2: : : : :
+LINIJA : : desni okret : 8 : 1: : : : :
+LINIJA : : polu desni okret : 8 : 2: : : : :
+LINIJA : : polu levi okret : 8 : 2: : : : :
+LINIJA : : levi okret : 8 : 3: : : : :
+LINIJA : : foto-klave complicate : 16 : 3: : : : :
+LINIJA : : cruse : 8 : 3: : : : :
+LINIJA : : al centro : 8 : 3: : : : :
+LINIJA : : mexico : 8 : 3: : : : :
+LINIJA : : produzene cruse : 8 : 4: : : : :
+LINIJA : : kick (iz osnovnog) : 8 : 4 : : : : :
+LINIJA : : kick (iz cumbie) : 8 : 4: : : : :
+LINIJA : : setnja (iz osnovnog) : 16 : 3: : : : :
+LINIJA : : bamboleo : 8 : 4: : : : :
+LINIJA : : nulta setnja : 16 : 4: : : : :
+LINIJA : : prsti-peta : 8 : 4: : : : :
+LINIJA : : pehar : 16 : 4: : : : :
+LINIJA : : roberto : 16 : 5: : : : :
 
-ECHO : : cumbia : 8
-ECHO : : reloj : 8
-ECHO : : vuelta : 8
-ECHO : : kombinacija : 16
-ECHO : : kombinacija por abajo : 16
-ECHO : : dile que no : 8
+PAR : ECHO : fly : 8 : 1  : : : : :
+PAR : ECHO : reloj : 8 : 1: : : : :
+PAR : ECHO : vuelta : 8 : 1: : : : :
+PAR : ECHO : kombinacija : 16 : 1: : : : :
+PAR : ECHO : kombinacija por abajo : 16 : 2: : : : :
+PAR : ECHO : dile que no : 8 : 2: : : : :
 
-CASINO : figura iz otvaranja : pnqe : 16
-CASINO : figura iz otvaranja : pnqe doble : 16
-CASINO : figura iz otvaranja : sombrero : 24
-CASINO : figura iz otvaranja : ocente y cuatro : 32
-CASINO : figura iz otvaranja : vacilila : 24
-CASINO : figura iz otvaranja : la montana : 40
-CASINO : figura iz otvaranja : el dedo : 32
-CASINO : figura iz otvaranja : setenta : 40
-CASINO : figura iz otvaranja : setenta y uno : 24
-CASINO : figura iz otvaranja : setenta y dos : 24
-CASINO : figura iz otvaranja : setenta y cuatro : 40
-CASINO : figura iz otvaranja : setenta complicate : 32
+PAR : CASINO : pnqe : 16 : 1 : : : : : : figura iz otvaranja 
+PAR : CASINO : pnqe doble : 16 : 1 : : : : : : figura iz otvaranja
+PAR : CASINO : sombrero : 24 : 1  : : : : : : figura iz otvaranja
+PAR : CASINO : ocente y cuatro : 32 : 3 : : : : : : figura iz otvaranja
+PAR : CASINO : vacilila : 24 : 3 : : : : : : figura iz otvaranja
+PAR : CASINO : la montana : 40 : 4 : : : : : : figura iz otvaranja
+PAR : CASINO : el dedo : 32 : 3 : : : : : : figura iz otvaranja
+PAR : CASINO : setenta : 40 : 3 : : : : : : figura iz otvaranja
+PAR : CASINO : setenta y uno : 24 : 4 : : : : : : figura iz otvaranja
+PAR : CASINO : setenta y dos : 24 : 4 : : : : : : figura iz otvaranja
+PAR : CASINO : setenta y cuatro : 40 : 4 : : : : : : figura iz otvaranja
+PAR : CASINO : setenta complicate : 32 : 5 : : : : : : figura iz otvaranja
 
-CASINO : figura iz encufle : encufla : 8
-CASINO : figura iz encufle : encufla-exibela : 16
-CASINO : figura iz encufle : pasela : 32
-CASINO : figura iz encufle : encufla doble : 16
-CASINO : figura iz encufle : encufla al centro : 8
-CASINO : figura iz encufle : pa ti pa mi : 32
-CASINO : figura iz encufle : kentacky : 24
+PAR : CASINO: encufla : 8 : 2 : : : : : : figura iz encufle 
+PAR : CASINO : encufla-exibela : 16 : 2 : : : : : : figura iz encufle 
+PAR : CASINO : pasela : 32 : 2 : : : : : : figura iz encufle 
+PAR : CASINO : encufla doble : 16 : 2 : : : : : : figura iz encufle 
+PAR : CASINO : encufla al centro : 8 : 2 : : : : : : figura iz encufle 
+PAR : CASINO : pa ti pa mi : 32 : 3 : : : : : : figura iz encufle 
+PAR : CASINO : kentacky : 24 : 3 : : : : : : figura iz encufle 
 
 
-RUEDA : casino : fly : 8 
-RUEDA : echo : dame : 8 
-RUEDA : casino : dame : 16  
-RUEDA : echo : taro : 8
-RUEDA : echo : palante : 8
-RUEDA : echo : paratras : 8
-RUEDA : casino : la prima : 16
-RUEDA : casino : dame y una : 16
-RUEDA : casino : dame y dos : 16
-RUEDA : casino : encufla dame mambo : 24
-RUEDA : casino : encufla dame contra mambo : 24
-RUEDA : casino : encufla dame fotoklave : 24
-RUEDA : casino : encufla dame Robin Hud : 16
-RUEDA : casino : encufla dame king kong : 24
-RUEDA : casino : dame dos : 16
-RUEDA : casino : dame dos con dos pasos : 24
-RUEDA : echo : tarito : 8
-RUEDA : echo : chiquita : 8 
-RUEDA : casino : matala : 24
-RUEDA : casino : directo : 8
+RUEDA : casino : fly : 8  : 1 : : : : :
+RUEDA : echo : dame : 8  : 1 : : : : :
+RUEDA : casino : dame : 16 : 1 : : : : :
+RUEDA : echo : taro : 8 : 1 : : : : :
+RUEDA : echo : palante : 8 : 3 : : : : :
+RUEDA : echo : paratras : 8 : 3 : : : : :
+RUEDA : casino : la prima : 16 : 4 : : : : :
+RUEDA : casino : dame y una : 16 : 3 : : : : :
+RUEDA : casino : dame y dos : 16 : 3 : : : : :
+RUEDA : casino : encufla dame mambo : 24 : 3 : : : : :
+RUEDA : casino : encufla dame contra mambo : 24 : 3 : : : : :
+RUEDA : casino : encufla dame fotoklave : 24 : 3 : : : : :
+RUEDA : casino : encufla dame Robin Hud : 16 : 4 : : : : :
+RUEDA : casino : encufla dame king kong : 24 : 4 : : : : :
+RUEDA : casino : dame dos : 16 : 4 : : : : :
+RUEDA : casino : dame dos con dos pasos : 24 : 4 : : : : :
+RUEDA : echo : tarito : 8 : 4 : : : : :
+RUEDA : echo : chiquita : 8 : 4 : : : : :
+RUEDA : casino : matala : 24 : 3 : : : : :
+RUEDA : casino : directo : 16 : 2 : : : : :
